@@ -2,7 +2,7 @@
 @section('content')
 
               <div class="col-md-9 col-sm-9 col-xs-9">
-                <div class="x_panel">
+                <div class="x_panel animate__animated animate__fadeIn">
                   <div class="x_title">
                     <h2><i class="fa fa-users"></i> Usuarios<small>/ Nuevo</small></h2>
                     <ul class="nav navbar-right panel_toolbox"></ul>

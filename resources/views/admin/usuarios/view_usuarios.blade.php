@@ -6,7 +6,7 @@
 @section('content')
 
       <div class="col-md-12 col-sm-12 ">
-        <div class="x_panel">
+        <div class="x_panel animate__animated animate__fadeIn">
 
           <div class="x_title">
             <h2><i class="fa fa-users"></i> Usuarios /<small>Lista</small></h2>
