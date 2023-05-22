@@ -49,6 +49,9 @@
         @include('layouts.adminLayout.admin_header')
        
         <div class="right_col" role="main">
+
+          <div class="back_logo"></div>    
+
          <div class="container">
             <div class="clearfix"></div>
               <div class="row">

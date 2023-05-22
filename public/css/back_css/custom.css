@@ -5171,3 +5171,19 @@ div.dataTables_processing > div:last-child > div { background: var(--c-4) ; }
   background-color: #000 !important; 
   color: #333333; 
 }
+
+.back_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-image: url('../../images/ll_fondo.fw.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 500px;
+  width: 75%;
+  position: absolute;
+}
+
+

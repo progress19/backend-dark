@@ -6,8 +6,6 @@ use App\Http\Controllers\UsuarioController;
 
 Auth::routes();
 
-Route::get('/', function () { return view('home'); });
-
 //Route::match(['get', 'post'], '/admin', 'AdminController@login');
 //Route::match(['get', 'post'], '/admin/login', 'AdminController@login');
 //Route::match(['get', 'post'], '/login', 'AdminController@login')->name('login');
@@ -21,9 +19,10 @@ Route::match(['get', 'post'], 'logout', [AdminController::class, 'logout']);
 
 
 Route::group(['middleware' => ['auth']], function() {
+
+	Route::get('/', function () { return view('admin/dashboard'); });
     
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
-
 
 	/* DATATABLES */
 

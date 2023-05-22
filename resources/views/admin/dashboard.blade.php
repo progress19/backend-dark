@@ -6,7 +6,7 @@
 @section('page-js-script')
 
 	@if (session('flash_message'))
-		  <script>toast('{!! session('flash_message') !!}');</script>
+	  <script>toast('{!! session('flash_message') !!}');</script>
 	@endif
 
 @stop
