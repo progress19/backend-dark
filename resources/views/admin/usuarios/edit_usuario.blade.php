@@ -14,7 +14,7 @@
             {{ Form::open([
               'id' => 'add_usuario',
               'name' => 'edit_usuario',
-              'url' => '/admin/edit-usuario/'.$usuario->id,
+              'url' => '/admin/editar-usuario/'.$usuario->id,
               'role' => 'form',
               'method' => 'post',
               'files' => true]) }}
@@ -62,7 +62,7 @@
                 </div>   
 
                 <div class="col-md-12"><div class="ln_solid"></div>
-                <button id="send" type="submit" class="btn btn-success pull-right">Guardar</button>
+                <button id="send" type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
               </div>
 
             {!! Form::close() !!}

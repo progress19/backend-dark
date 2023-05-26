@@ -36,15 +36,12 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('/admin/check-pwd','AdminController@chkPassword');
 	Route::match(['get','post'], '/admin/update-pwd', 'AdminController@updatePassword');
 	
-	Route::get('/admin/reset-pwd','AdminController@resetPassword');
+	Route::get( 'admin/reset-pwd', [AdminController::class, 'resetPassword']);
 
 	//Usuarios Routes (Admin)
-	//Route::match(['get','post'],'/admin/add-usuario','UsuarioController@addUsuario');
 	Route::match(['get', 'post'], 'admin/agregar-usuario', [UsuarioController::class, 'addUsuario']);
-	//Route::match(['get','post'],'/admin/edit-usuario/{id}','UsuarioController@editUsuario');
-
-	//Route::match(['get','post'],'/admin/delete-usuario/{id}','UsuarioController@deleteUsuario');
-	
+	Route::match(['get','post'],'/admin/editar-usuario/{id}', [UsuarioController::class, 'editarUsuario']);
+	Route::match(['get','post'],'/admin/eliminar-usuario/{id}', [UsuarioController::class, 'eliminarUsuario']);
 	Route::get('/admin/ver-usuarios', [UsuarioController::class, 'viewUsuarios']);
 
 });

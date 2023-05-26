@@ -58,8 +58,7 @@
                 </div>   
 
                 <div class="col-md-12"><div class="ln_solid"></div>
-                <button id="send" type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o" aria-hidden="true"></i>
-                   Guardar</button>
+                <button id="send" type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
               </div>
 
     {!! Form::close() !!}

@@ -941,13 +941,14 @@
 
 .img-circle.profile_img {
   width: 70%;
-  background: #fff;
   margin-left: 15%;
   z-index: 1000;
   position: inherit;
   margin-top: 20px;
   border: 1px solid rgba(52, 73, 94, 0.44);
-  padding: 4px; }
+  padding: 4px;
+  background: var(--c-5);
+}
 
 .profile_info {
   padding: 25px 10px 10px;
@@ -1315,7 +1316,14 @@ a:hover, a:focus {
 
 .dropdown-item {
   width: 100%;
-  padding: 12px 20px; }
+  padding: 12px 20px;
+  color: var(--c-4) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--c-5) !important;
+  border-radius: 10px;
+}
 
 .top_nav li a i {
   font-size: 15px; }
@@ -1404,7 +1412,7 @@ a:hover, a:focus {
   padding: 13px 15px 12px; }
 
 .nav.side-menu > li.current-page, .nav.side-menu > li.active {
-  border-right: 5px solid #1ABB9C; }
+  border-right: 2px solid var(--c-7); }
 
 .nav li.current-page {
   background: rgba(255, 255, 255, 0.05); }
@@ -2123,16 +2131,22 @@ ul.msg_list li a .message {
 
 .navbar-nav .open .dropdown-menu {
   position: absolute;
-  background: #fff;
+  background: var(--c-5);
   margin-top: 0;
-  border: 1px solid #D9DEE4;
+  border: 0px solid #D9DEE4;
   -webkit-box-shadow: none;
   right: 0;
   left: auto;
-  width: 220px; }
+  width: 220px; 
+  border-radius: 7px;
+}
 
 .navbar-nav .open .dropdown-menu.msg_list {
   width: 300px !important; }
+
+  .dropdown-item {
+    color: #212529;
+  }
 
 ul.to_do {
   padding: 0; }
@@ -2338,7 +2352,7 @@ span.right {
   padding: 0; }
 
 a.user-profile {
-  color: #5E6974 !important; }
+  color: var(--c-7) !important; }
 
 .user-profile img {
   width: 29px;
@@ -5184,6 +5198,17 @@ div.dataTables_processing > div:last-child > div { background: var(--c-4) ; }
   background-size: 500px;
   width: 75%;
   position: absolute;
+  top: 40px;
 }
 
+.modal-content {
+  background-color: var(--c-5) !important;
+}
 
+.modal-header {
+  border-bottom: 1px solid var(--c-2) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--c-2) !important;
+}

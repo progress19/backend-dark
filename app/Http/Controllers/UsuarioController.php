@@ -25,7 +25,7 @@ class UsuarioController extends Controller {
         return Datatables::of($users)
      
             ->addColumn('nombre', function ($user) {
-                return "<a title='Clic para editar...' href='edit-usuario/$user->id'>$user->name</a>"; 
+                return "<a title='Clic para editar...' href='editar-usuario/$user->id'>$user->name</a>"; 
             })
 
             ->addColumn('rol', function ($user) {
@@ -37,7 +37,7 @@ class UsuarioController extends Controller {
             })
 
             ->addColumn('acciones', function ($user) {
-                return "<a href='delete-usuario/$user->id' class='delReg'><i class='fa fa-trash-o' aria-hidden='true'></i></a>";               
+                return "<a href='eliminar-usuario/$user->id' class='delReg'><i class='fa fa-trash-o' aria-hidden='true'></i></a>";               
             })
 
             ->rawColumns(['nombre','estado','acciones'])
@@ -69,32 +69,12 @@ class UsuarioController extends Controller {
     /*                      E D I T                          */
     /*********************************************************/
 
-    public function editUsuario(Request $request, $id = null) {
+    public function editarUsuario(Request $request, $id = null) {
 
         if ($request->isMethod('post')) {
 
             $data = $request->all();
-            //echo "<pre>"; print_r($data); die;
-            
-            /*
-            $check_password = User::where(['email' => Auth::user()->email])->first();
-            $password = $data['current_password'];
-            
-            if (!Hash::check($password,$check_password->password)) {
-                $password = bcrypt($data['current_password']);
-                User::where('id',$id)->update(['password'=>$password]);
-
-                //Session::put('flash_message', 'Contraseña actualizada correctamente!');
-            
-                    echo $data['current_password'];
-
-            } else {
-                    
-                    echo $data['current_password'];
-
-            }
-            */
-            
+                        
             User::where(['id'=>$id])->update([
                 'name' => $data['name'],
                 'email' => $data['email'],
@@ -116,7 +96,7 @@ class UsuarioController extends Controller {
     /*                   D E L E T E                       */
     /*********************************************************/
 
-    public function deleteUsuario(Request $request, $id = null) {
+    public function eliminarUsuario(Request $request, $id = null) {
 
         if (!empty($id)) {
             User::where(['id'=>$id])->delete();

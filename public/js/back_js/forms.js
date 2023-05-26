@@ -1,6 +1,5 @@
 
 
-
 $(document).ready(function() {
 
 /* delete register */
@@ -151,7 +150,7 @@ $("#edit_usuario").validate({
         'name': "Por favor ingrese nombre.",
         'email': "Por favor ingrese un valor.",
         'password': "Por favor ingrese un valor.",
-},
+    },
     debug: true,errorElement: "label",
 
     submitHandler: function(form){
